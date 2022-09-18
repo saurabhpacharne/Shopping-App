@@ -1,0 +1,17 @@
+.badge::after{
+content: attr(data-count);
+position: absolute;
+background: #ff6600;
+height: 1rem;
+top: 0.8rem;
+right: 1.3rem;
+width: 1.1rem;
+text-align: center;
+line-height: 0.9rem;
+font-size: 0.7rem;
+border-radius: 50%;
+color:white;
+border: 1px solid #ff6600;
+font-family: sans-serif;
+font-weight: bold;
+}
