@@ -12,7 +12,9 @@ const Login = () => {
   let navigate = useNavigate();
 
   useEffect(()=>{
+    if(loggedIn.length!==0){
     localStorage.setItem("userData",JSON.stringify(loggedIn))
+    }
   },[loggedIn])
 
 
