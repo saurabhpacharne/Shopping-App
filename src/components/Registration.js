@@ -33,7 +33,7 @@ const Registration = () => {
     setFormError(validate(user));
     issubmit(true);
     if (Object.keys(formError).length === 0 && submit) {
-      await axios.post("http://localhost:3005/users", user);
+      await axios.post("https://my-json-server.typicode.com/saurabhpacharne/Db/db", user);
       alert("you have successfully registered");
       navigate("/login");
     }
