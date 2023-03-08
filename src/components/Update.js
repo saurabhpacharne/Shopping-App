@@ -112,7 +112,7 @@ const Update = () => {
               </label>
               <div className="col-sm-10">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control"
                   id="password"
                   name="password"
