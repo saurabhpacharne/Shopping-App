@@ -14,7 +14,7 @@ const  Detail= () => {
     },[])
 
     const loadAllProduct = async ()=>{
-      const response = await axios.get(`https://my-json-server.typicode.com/saurabhpacharne/Db/db/${id}`);  
+      const response = await axios.get(`https://my-json-server.typicode.com/saurabhpacharne/Db/products/${id}`);  
       setProduct(response.data);   
     }
 
