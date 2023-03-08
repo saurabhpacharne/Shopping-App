@@ -25,26 +25,26 @@ const Home = () => {
   }, []);
 
   const getAllProduct = async () => {
-    const response = await axios.get("https://my-json-server.typicode.com/saurabhpacharne/Db/db");
+    const response = await axios.get("http://localhost:3005/products");
     setProduct(response.data);
   };
 
   const ascSort = async () => {
-    const response = await axios.get("https://my-json-server.typicode.com/saurabhpacharne/Db/db");
+    const response = await axios.get("http://localhost:3005/products");
     const data = response.data.sort((a, b) => a.price - b.price);
     setProduct(data);
     setsort(" LOW TO HIGH");
   };
 
   const dscSort = async () => {
-    const response = await axios.get("https://my-json-server.typicode.com/saurabhpacharne/Db/db");
+    const response = await axios.get("http://localhost:3005/products");
     const data = response.data.sort((a, b) => b.price - a.price);
     setProduct(data);
     setsort(" HIGH TO LOW");
   };
 
   const rateSort = async () => {
-    const response = await axios.get("https://my-json-server.typicode.com/saurabhpacharne/Db/db");
+    const response = await axios.get("http://localhost:3005/products");
     const data = response.data.sort((a, b) => b.rate - a.rate);
     setProduct(data);
     setsort("MOST RATED");
