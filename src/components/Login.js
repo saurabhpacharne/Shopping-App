@@ -20,7 +20,8 @@ const Login = () => {
 
   const submitForm =async (e) => {
     e.preventDefault();
-    const result = await axios.get("https://my-json-server.typicode.com/saurabhpacharne/Db/db");
+    const result = await axios.get("https://my-json-server.typicode.com/saurabhpacharne/Db/users");
+    console.log(result.data)
     if (email && password) {
       setNewArr([...newArr, allArr]);
 

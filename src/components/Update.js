@@ -26,14 +26,14 @@ const Update = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     await axios.put(
-      `https://my-json-server.typicode.com/saurabhpacharne/Db/db/${userData.map((val) => val.id)}`,
+      `https://my-json-server.typicode.com/saurabhpacharne/Db/users/${userData.map((val) => val.id)}`,
       user
     );
   };
 
   const getUserData = async () => {
     const res = await axios.get(
-      `https://my-json-server.typicode.com/saurabhpacharne/Db/db/${userData.map((val) => val.id)}`
+      `https://my-json-server.typicode.com/saurabhpacharne/Db/users/${userData.map((val) => val.id)}`
     );
     setUser(res.data);
   };
