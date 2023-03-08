@@ -1,4 +1,4 @@
-import { BrowserRouter,HashRouter,Route,Routes } from "react-router-dom";
+import { BrowserRouter,Route,Routes } from "react-router-dom";
 import Registration from "./components/Registration";
 import React from "react";
 import Home from "./components/Home";
@@ -16,7 +16,7 @@ import Protected from "./components/Protected";
     
   return (
     <>
-    <HashRouter>
+    <BrowserRouter basename="/Shopping-App">
     <Routes>
     <Route exact path = "/login" element={<Login/>}/>
     <Route exact path = "/" element={<Login/>}/>
@@ -27,7 +27,7 @@ import Protected from "./components/Protected";
     <Route exact path = "/order" element={<Protected Component={Checkout}/>}/>  
     <Route exact path = "/profile" element={<Protected Component={Update}/>}/>   
     </Routes>
-    </HashRouter>
+    </BrowserRouter>"
     </>
   )
 }
